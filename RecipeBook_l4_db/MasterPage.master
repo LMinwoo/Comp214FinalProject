@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Recipe Book</title>
+<%--    <link href="HomepageStyle.css" rel="stylesheet" type="text/css" />--%>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div style="width: 975px; margin-right: auto; margin-left: auto;">
+        <form id="form1" runat="server">
+       
+        <%--<asp:AdRotator ID="banners" runat="server" AdvertisementFile="~/Banner.xml" />--%>
+            <h1> Cook Book
+			<img src="images/logo.jpg" alt="logo" />
+	        </h1>
+            <asp:HyperLink ID="home" NavigateUrl="~/Home.aspx" ImageUrl="images/home.png" runat="server" Text="Home" /> <a href="home.aspx">HOME</a>
+            <asp:HyperLink ID="recipe" NavigateUrl="~/recipes.aspx" ImageUrl="images/recipes.png" runat="server" /><a href="recipes.aspx">RECIPES</a>
+            <asp:HyperLink ID ="addRecipe" NavigateUrl="~/addRecipe.aspx" ImageUrl ="images/add.png" runat="server"/><a href="addRecipe.aspx">ADD RECIPE</a>
+            <asp:HyperLink ID="search" NavigateUrl="~/search.aspx" ImageUrl="images/search.png" runat="server" /><a href="search.aspx">SEARCH</a>
+        <article>
+            
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </article>
+
+        <footer style="text-align: center">
+            <hr />
+            <small class="footer-copyright">COPYRIGHT &copy; 2016 Ling Liu , Minwoo Lee, Hassan Kobeissi &bull; Centennial College &bull; COMP214</small>
+        </footer>
+    
+    </form>
+    </div>
+</body>
+</html>
